@@ -8,13 +8,36 @@
   <title>Product List</title>
 </head>
 <body>
+  <!-- NAVBAR -->
+<nav class="navbar">
   <div class="header">
     <h1>Royal Cloth Center</h1>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About us</a>
+    </div>
+
+    <!-- Animated Search Bar -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search products...">
+      <button id="searchBtn"><i class="fas fa-search"></i></button>
+    </div>
+
+    <!-- Cart Icon -->
     <div class="cart-icon" id="cart-icon">
       <i class="fas fa-shopping-cart"></i>
       <div class="cart-count" id="cart-count">0</div>
     </div>
+
+    <!-- Hamburger -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
+</nav>
+
 
   <div class="products">
     <!-- Product Card 1 -->
@@ -145,7 +168,7 @@
       </div>
     </div>
   </div>
-
+  
   <script src="product.js"></script>
 </body>
 </html>

@@ -42,4 +42,3 @@ items.forEach(item => {
   clone.setAttribute('aria-hidden', true);
   scrollerInner.appendChild(clone);
 });
-

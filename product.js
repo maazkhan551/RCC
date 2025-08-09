@@ -1,6 +1,15 @@
 // ====== CART DATA ======
 // We'll store cartItems as an OBJECT keyed by product id: { "1": { name, price, image, quantity }, ... }
 let cartItems = JSON.parse(localStorage.getItem("cartItems")) || {};
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
+const searchContainer = document.querySelector(".search-container");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("active");
+  searchContainer.classList.toggle("active");
+});
+
 
 // Elements
 const cartCountEl = document.getElementById("cart-count");
@@ -155,3 +164,61 @@ checkoutBtnDiv.addEventListener("click", () => {
 
 // ====== INIT CART ON PAGE LOAD ======
 document.addEventListener("DOMContentLoaded", updateCart);
+document.querySelector('.search-container i').addEventListener('click', () => {
+  document.getElementById('productSearch').focus();
+});
+
+// ======== Search Bar filter ==================
+const searchInput = document.getElementById("searchInput");
+const products = document.querySelectorAll(".card");
+searchInput.addEventListener("input", () => {
+  const filter = searchInput.value.toLowerCase();
+
+  // If search is empty → reset everything
+  if (!filter) {
+    products.forEach(p => {
+      p.style.display = "";
+      p.classList.remove("search-highlight");
+      p.style.height = "";
+      p.style.width = "";
+
+      const img = p.querySelector("img");
+      if (img) {
+        img.style.width = "";
+        img.style.height = "";
+        img.style.objectFit = "";
+      }
+    });
+    return; // stop here
+  }
+
+  // Otherwise → filter results
+  products.forEach(p => {
+    const text = p.textContent.toLowerCase();
+    const img = p.querySelector("img");
+
+    if (text.includes(filter)) {
+      p.style.display = "";
+      p.classList.add("search-highlight");
+
+      if (img) {
+        img.style.width = "200px";
+        img.style.height = "200px";
+        img.style.objectFit = "cover";
+      }
+      p.style.height = "350px";
+      p.style.width = "250px";
+    } else {
+      p.style.display = "none";
+      p.classList.remove("search-highlight");
+
+      if (img) {
+        img.style.width = "";
+        img.style.height = "";
+        img.style.objectFit = "";
+      }
+      p.style.height = "";
+      p.style.width = "";
+    }
+  });
+});
