@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="product.css">
+  <link rel="stylesheet" href="product.css" />
   <title>Product List</title>
 </head>
 <body>
-    <div class="header">
+  <div class="header">
     <h1>Royal Cloth Center</h1>
-    <div class="cart-icon">
+    <div class="cart-icon" id="cart-icon">
       <i class="fas fa-shopping-cart"></i>
       <div class="cart-count" id="cart-count">0</div>
     </div>
@@ -19,7 +19,7 @@
   <div class="products">
     <!-- Product Card 1 -->
     <div class="card">
-      <img src="cart_images/product1.webp" alt="Product 1">
+      <img src="cart_images/product1.webp" alt="Silk Kurta">
       <h3>Silk Kurta</h3>
       <p class="price">$25.00</p>
       <input type="number" min="1" value="1" class="quantity-input" id="qty-1">
@@ -28,7 +28,7 @@
 
     <!-- Product Card 2 -->
     <div class="card">
-      <img src="cart_images/formal.webp" alt="Product 2">
+      <img src="cart_images/formal.webp" alt="Formal Suit">
       <h3>Formal Suit</h3>
       <p class="price">$45.00</p>
       <input type="number" min="1" value="1" class="quantity-input" id="qty-2">
@@ -37,7 +37,7 @@
 
     <!-- Product Card 3 -->
     <div class="card">
-      <img src="cart_images/casual.webp" alt="Product 3">
+      <img src="cart_images/casual.webp" alt="Casual Shirt">
       <h3>Casual Shirt</h3>
       <p class="price">$18.00</p>
       <input type="number" min="1" value="1" class="quantity-input" id="qty-3">
@@ -46,7 +46,7 @@
 
     <!-- Product Card 4 -->
     <div class="card">
-      <img src="cart_images/lawn.webp" alt="Product 4">
+      <img src="cart_images/lawn.webp" alt="Printed Lawn">
       <h3>Printed Lawn</h3>
       <p class="price">$22.00</p>
       <input type="number" min="1" value="1" class="quantity-input" id="qty-4">
@@ -55,7 +55,7 @@
 
     <!-- Product Card 5 -->
     <div class="card">
-      <img src="cart_images/winter_coat.jpg" alt="Product 5">
+      <img src="cart_images/winter_coat.jpg" alt="Winter Coat">
       <h3>Winter Coat</h3>
       <p class="price">$60.00</p>
       <input type="number" min="1" value="1" class="quantity-input" id="qty-5">
@@ -64,7 +64,7 @@
 
     <!-- Product Card 6 -->
     <div class="card">
-      <img src="cart_images/shawl.jpg" alt="Product 6" height="400px">
+      <img src="cart_images/shawl.jpg" alt="Velvet Shawl" height="400px">
       <h3>Velvet Shawl</h3>
       <p class="price">$35.00</p>
       <input type="number" min="1" value="1" class="quantity-input" id="qty-6">
@@ -73,7 +73,7 @@
 
     <!-- Product Card 7 -->
     <div class="card">
-      <img src="cart_images/dress.jpg" alt="Product 7">
+      <img src="cart_images/dress.jpg" alt="Embroidered Dress">
       <h3>Embroidered Dress</h3>
       <p class="price">$55.00</p>
       <input type="number" min="1" value="1" class="quantity-input" id="qty-7">
@@ -82,7 +82,7 @@
 
     <!-- Product Card 8 -->
     <div class="card">
-      <img src="cart_images/party_wear.webp" alt="Product 8">
+      <img src="cart_images/party_wear.webp" alt="Party Wear">
       <h3>Party Wear</h3>
       <p class="price">$48.00</p>
       <input type="number" min="1" value="1" class="quantity-input" id="qty-8">
@@ -91,7 +91,7 @@
 
     <!-- Product Card 9 -->
     <div class="card">
-      <img src="cart_images/Linen.webp" alt="Product 9">
+      <img src="cart_images/Linen.webp" alt="Linen Kurti">
       <h3>Linen Kurti</h3>
       <p class="price">$28.00</p>
       <input type="number" min="1" value="1" class="quantity-input" id="qty-9">
@@ -100,7 +100,7 @@
 
     <!-- Product Card 10 -->
     <div class="card">
-      <img src="cart_images/dupatta.webp" alt="Product 10">
+      <img src="cart_images/dupatta.webp" alt="Chiffon Dupatta">
       <h3>Chiffon Dupatta</h3>
       <p class="price">$15.00</p>
       <input type="number" min="1" value="1" class="quantity-input" id="qty-10">
@@ -109,7 +109,7 @@
 
     <!-- Product Card 11 -->
     <div class="card">
-      <img src="cart_images/piece.webp" alt="Product 11">
+      <img src="cart_images/piece.webp" alt="3-Piece Suit">
       <h3>3-Piece Suit</h3>
       <p class="price">$65.00</p>
       <input type="number" min="1" value="1" class="quantity-input" id="qty-11">
@@ -118,7 +118,7 @@
 
     <!-- Product Card 12 -->
     <div class="card">
-      <img src="cart_images/jeans.webp" alt="Product 12">
+      <img src="cart_images/jeans.webp" alt="Jeans Pant">
       <h3>Jeans Pant</h3>
       <p class="price">$30.00</p>
       <input type="number" min="1" value="1" class="quantity-input" id="qty-12">
@@ -126,35 +126,26 @@
     </div>
 
   </div>
-  <div class="cart">
+
+  <div class="cart" id="cart-panel">
     <h2>Cart</h2>
-    <div class="listcart">
-      <div class="item">
-        <img src="cart_images/dress.jpg" alt="">
-        <div class="content">
-          <div class="Name">
-            Product Name
-          </div>
-          <div class="price">
-            50$/1price
-          </div>
-        </div>
-        <div class="quantity">
-          <button>-</button>
-          <span class="value">3</span>
-          <button>+</button>
-        </div>
-      </div>
+
+    <div class="listcart" id="listcart">
+      
     </div>
+
+    <div class="cart-total">
+      <h3>Total: $<span id="cart-total-amount">0.00</span></h3>
+    </div>
+
     <div class="buttons">
-      <div class="close">Close</div>
-      <div class="checkout">
-        <a href="checkout.html">
-          Checkout
-        </a>
+      <div class="close" id="close-cart">Close</div>
+      <div class="checkout" id="checkout-btn">
+        <a href="checkout.html">Checkout</a>
       </div>
     </div>
   </div>
+
   <script src="product.js"></script>
 </body>
 </html>
