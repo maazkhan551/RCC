@@ -144,7 +144,7 @@ nav {
 .mobile-menu {
   display: none;
   flex-direction: column;
-  background: white;
+  background: radial-gradient(circle,#333333,#A9A9A9);
   width: 100%;
   position: absolute;
   top: 60px;
@@ -153,7 +153,11 @@ nav {
   box-shadow: 0 5px 10px rgba(0,0,0,0.1);
   animation: slideDown 0.3s ease forwards;
 }
-
+.mobile-menu a{
+  text-decoration: none;
+  color: white;
+  line-height: 1.5rem;
+}
 @keyframes slideDown {
   0% {
     opacity: 0;
