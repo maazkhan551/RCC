@@ -98,9 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Your cart is empty.");
       return;
     }
-    // In a real app you'd send order to a server here.
-    alert("Order placed successfully! Thank you 😊");
-    // clear
     localStorage.removeItem("cartItems");
     cartArray = [];
     renderCheckout();

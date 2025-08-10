@@ -11,7 +11,7 @@ body {
 
 /* General Navbar Styling */
 .navbar {
-  background: linear-gradient(45deg, #bf9264, #a06f3f);
+  background: linear-gradient(45deg, #3C3D37, #393E46);
   color: white;
   padding: 10px 20px;
   position: sticky;
@@ -39,7 +39,7 @@ body {
 }
 
 .nav-links a {
-  color: white;
+  color: #EBEAFF;
   text-decoration: none;
   font-weight: bold;
   position: relative;
@@ -82,7 +82,7 @@ body {
 }
 
 .search-container button {
-  background: #bf9264;
+  background: #173B45;
   border: none;
   padding: 5px 10px;
   cursor: pointer;
@@ -165,7 +165,7 @@ body {
 }
 
 .price {
-  color: #bf9264;
+  color: #948979;
   font-weight: bold;
   font-size: 18px;
 }
@@ -313,19 +313,23 @@ body {
 }
 /* responsive */
 @media (max-width: 800px) {
- .nav-links, .search-container {
+  .search-container {
     display: none;
-    flex-direction: column;
     width: 100%;
     background: rgba(0,0,0,0.9);
     padding: 15px;
     position: absolute;
     top: 60px;
-    left: 0;
+    left: 20px;
     animation: slideDown 0.5s ease forwards;
   }
+  .search-container{
+    height: auto; /* or set to desired small size */
+    overflow: hidden;
+    pointer-events: auto;
+  }
 
-  .nav-links.active, .search-container.active {
+  .search-container.active {
     display: flex;
   }
 
@@ -333,7 +337,7 @@ body {
     display: flex;
   }
   .search-container input{
-    width: 70px;
+    width: 150px;
   }
   .products{
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

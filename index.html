@@ -46,7 +46,7 @@
     Your browser does not support the video tag.
   </video>
   <h1 id="greeting-heading" class="greeting">Welcome to Royal Cloth Center</h1>
-  <h2>Where quality meets sophistication.</h2>
+  <h2 style="color: white;">Where quality meets sophistication.</h2>
 </section>
 <section class="main_about" id="about">
   <h2 class="about-heading">About Us</h2>
@@ -162,10 +162,12 @@
       <p>Our expert tailoring ensures every garment fits you flawlessly — like it was made just for you.</p>
     </div>
     <div class="why-card">
+      <p style="font-size: 30px;">🌍</p>
       <h3>Trusted by Thousands</h3>
       <p>Royal Cloth Center has served thousands of satisfied customers with consistency and class.</p>
     </div>
     <div class="why-card">
+      <p style="font-size: 30px;">👗</p>
       <h3>Affordable Luxury</h3>
       <p>We believe style and elegance should be accessible to everyone — without compromising quality.</p>
     </div>
@@ -197,29 +199,48 @@
 </section>
 
 <section class="contact-section" id="contact">
+  <div class="con">
   <h2>Contact Us</h2>
   <p class="contact-subtitle">We'd love to hear from you! Whether you have a question or want to place a custom order.</p>
+  </div>
 
-  <form class="contact-form">
-    <div class="form-group">
-      <h3>Name: </h1>
-      <input type="text" name="name" placeholder="Your Name" required>
+<div class="contact-section">
+  <div class="contact-container">
+
+    <div class="video-side">
+      <video autoplay muted loop playsinline>
+        <source src="cart_images/contact.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
-    <div class="form-group">
-      <h3>Email:</h1>
-      <input type="email" name="email" placeholder="Your Email" required>
+
+    <div class="form-side">
+      <form class="contact-form">
+        <div class="form-group">
+          <h3>Name:</h3>
+          <input type="text" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <h3>Email:</h3>
+          <input type="email" name="email" placeholder="Your Email" required>
+        </div>
+        <div class="form-group">
+          <h3>Subject:</h3>
+          <input type="text" name="subject" placeholder="Subject">
+        </div>
+        <div class="form-group">
+          <h3>Your Message:</h3>
+          <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="contact-btn">Send Message</button>
+      </form>
     </div>
-    <div class="form-group">
-      <h3>Subject:</h2>
-      <input type="text" name="subject" placeholder="Subject">
-    </div>
-    <div class="form-group">
-      <h3>Your Message: </h2>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    </div>
-    <button type="submit" class="contact-btn">Send Message</button>
-  </form>
+
+  </div>
+ </div>
 </section>
+
+
 <footer class="footer">
   <div class="footer-container">
     <div class="footer-left">

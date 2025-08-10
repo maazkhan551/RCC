@@ -25,7 +25,7 @@ table {
 }
 
 thead {
-  background: #bf9264;
+  background: #7A7A73;
   color: white;
 }
 
@@ -54,7 +54,7 @@ input[type="number"] {
 }
 
 .btn {
-  background: #bf9264;
+  background: #7A7A73;
   color: #fff;
   border: none;
   padding: 10px 14px;
@@ -74,8 +74,12 @@ input[type="number"] {
 @media (max-width: 768px) {
   table, th, td {
     font-size: 14px;
+    width: 50px;
   }
   input[type="number"] {
     width: 50px;
+  }
+  .checkout-container{
+    max-width: 320px;
   }
 }

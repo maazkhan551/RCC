@@ -22,7 +22,6 @@ nav {
   z-index: 999;
 }
 
-/* ✅ Updated Logo Section */
 .logo img {
   height: 40px;
   object-fit: contain;
@@ -57,7 +56,8 @@ nav {
 
 
 .greeting {
-  margin-top: 50px;
+  margin-top: 200px;
+  margin-bottom: 30px;
   font-size: 2.5rem;
   color: black;
   opacity: 0;
@@ -65,7 +65,6 @@ nav {
   transition: all 0.6s ease;
 }
 
-/* When visible */
 .greeting.animate{
   opacity: 1;
   transform: scale(1);
@@ -563,35 +562,57 @@ nav {
   }
 }
 .contact-section {
-  margin: 10px 20px;
-  border-radius: 20px;
-  background-color: #f9f4ef;
-  padding: 80px 20px;
-  text-align: center;
-  color: #2c2c2c;
+  margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  position: relative;
+  text-align: center;
+  background-color: #f9f4ef;
 }
-.form-group h3{
-    text-align: left;
+.con{
+  line-height: 2rem;
+  margin: 30px;
 }
-.contact-section h2 {
-  font-size: 2.5rem;
-  color: #7e22ce;
-  margin-bottom: 10px;
+.contact-container {
+  display: flex;
 }
 
-.contact-subtitle {
-  font-size: 1rem;
-  color: #555;
-  margin-bottom: 40px;
+/* Left side video */
+.video-side {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.video-side video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+/* Right side form */
+.form-side {
+  flex: 1;
+  background-color: #f9f4ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
 }
 
 .contact-form {
-  max-width: 600px;
-  margin: auto;
+  width: 100%;
+  max-width: 500px;
   display: grid;
   gap: 20px;
+}
+
+.form-group h3 {
+  margin-bottom: 5px;
+  text-align: left;
 }
 
 .form-group input,
@@ -611,14 +632,12 @@ nav {
 }
 
 .contact-btn {
-  height: 30px;
-  width: 250px;
+  height: 45px;
   background-color: blue;
   color: white;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
-  margin: 10px auto;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -628,15 +647,19 @@ nav {
 }
 
 /* Responsive */
-@media (max-width: 600px) {
-  .contact-section {
-    padding: 60px 15px;
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    height: auto;
   }
-
-  .contact-section h2 {
-    font-size: 2rem;
+  .video-side {
+    height: 250px;
+  }
+  .form-side {
+    padding: 20px;
   }
 }
+
 
 .footer {
   background-color: #111;
@@ -695,7 +718,10 @@ nav {
   .nav-links {
     display: none;
   }
-
+  .greeting{
+    margin-top: 100px;
+    margin-bottom: 10px;
+  }
   .hamburger {
     display: flex;
   }
@@ -716,6 +742,10 @@ nav {
   }
   .offer-text {
     text-align: center;
+    order: 2;
+  }
+  .offer-item .offer-image {
+    order: 1;
   }
   .offer-text p {
   font-size: 1.1rem;
