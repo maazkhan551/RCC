@@ -74,12 +74,8 @@ input[type="number"] {
 @media (max-width: 768px) {
   table, th, td {
     font-size: 14px;
-    width: 50px;
   }
   input[type="number"] {
     width: 50px;
-  }
-  .checkout-container{
-    max-width: 320px;
   }
 }
